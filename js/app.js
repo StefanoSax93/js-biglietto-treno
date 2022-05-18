@@ -18,13 +18,13 @@ posso inserire un minimo / massimo di km possibili? */
 
 
 alert ("Benvenuto utente. Rispondi alle seguenti domande per ottenere il prezzo del tuo biglietto");
-let eta = prompt("Quanti anni hai?");
-let etaLength = eta.length; 
+let eta = prompt("Quanti anni hai?"); 
 var valid = false;
 while (!valid) {
-    if (isNaN(eta)) {
+    if (isNaN(eta) || eta.length == 0) {
         eta = prompt("Seleziona un età valida.")
-    }  else {
+    } 
+    else {
         valid = true;
     }
 };
@@ -32,8 +32,8 @@ while (!valid) {
 let quantitaKm = prompt("Quanti chilometri vuoi percorrere?");
 var valid = false;
 while (!valid) {
-    if (isNaN(quantitaKm)) {
-        quantitaKm = prompt("Seleziona un valore numerico valido.")
+    if (isNaN(quantitaKm) || quantitaKm.length < 1 || quantitaKm.length > 4) {
+        quantitaKm = prompt("Seleziona un valore numerico valido da 1 a 4 cifre.")
     }  else {
         valid = true;
     }
