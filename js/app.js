@@ -22,7 +22,7 @@ let eta = prompt("Quanti anni hai?");
 let etaLength = eta.length; 
 var valid = false;
 while (!valid) {
-    if (isNaN(eta) || etaLength < 1) {
+    if (isNaN(eta)) {
         eta = prompt("Seleziona un età valida.")
     }  else {
         valid = true;
