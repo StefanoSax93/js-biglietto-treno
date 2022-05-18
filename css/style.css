@@ -1,0 +1,14 @@
+.section {
+    min-height: 100vh;
+    background: linear-gradient(20deg,black,red);
+}
+.box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid black;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #e66465, #9198e5);
+    box-shadow: 10px 10px 25px 10px black;
+}
