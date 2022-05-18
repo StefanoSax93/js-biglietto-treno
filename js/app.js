@@ -35,12 +35,12 @@ if (eta < 18) {
 };
 
 let age = document.getElementById("eta");
-age.innerHTML = `Età: ${eta} anni`
+age.innerHTML = `Età: ${eta} anni`;
 
 let Km = document.getElementById("km");
-Km.innerHTML = `Distanza selezionata: ${quantitaKm} km`
+Km.innerHTML = `Distanza selezionata: ${quantitaKm} km`;
 
 let finalPrice = document.getElementById("prezzo-finale");
-finalPrice.innerHTML = `Prezzo biglietto: ${prezzoFinale}€`
+finalPrice.innerHTML = `Prezzo biglietto: ${prezzoFinale.toFixed(2)}€`;
 
 
