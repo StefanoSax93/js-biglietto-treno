@@ -17,11 +17,28 @@ km è un numero valido?
 posso inserire un minimo / massimo di km possibili? */
 
 
-alert ("Benvenuto utente.Rispondi alle seguenti domande per ottenere il prezzo del tuo biglietto");
-let annoNascita = prompt("Qual è il tuo anno di nascita?");
+alert ("Benvenuto utente. Rispondi alle seguenti domande per ottenere il prezzo del tuo biglietto");
+let eta = prompt("Quanti anni hai?");
+let etaLength = eta.length; 
+var valid = false;
+while (!valid) {
+    if (isNaN(eta) || etaLength < 1) {
+        eta = prompt("Seleziona un età valida.")
+    }  else {
+        valid = true;
+    }
+};
+
 let quantitaKm = prompt("Quanti chilometri vuoi percorrere?");
-const currentDate = new Date().getFullYear();
-let eta =  currentDate - annoNascita;
+var valid = false;
+while (!valid) {
+    if (isNaN(quantitaKm)) {
+        quantitaKm = prompt("Seleziona un valore numerico valido.")
+    }  else {
+        valid = true;
+    }
+};
+
 let prezzoBiglietto = quantitaKm * 0.21;
 console.log (`hai ${eta} anni`);
 let prezzoFinale;
