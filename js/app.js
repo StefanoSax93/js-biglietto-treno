@@ -24,11 +24,23 @@ const currentDate = new Date().getFullYear();
 let eta =  currentDate - annoNascita;
 let prezzoBiglietto = quantitaKm * 0.21;
 console.log (`hai ${eta} anni`);
+let prezzoFinale;
 
 if (eta < 18) {
-    console.log (prezzoBiglietto - (prezzoBiglietto * 20 / 100))
+    (prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 20 / 100))
 } else if (eta > 65) {
-    console.log (prezzoBiglietto - (prezzoBiglietto * 40 / 100))
+    (prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 40 / 100))
 } else {
-    console.log (prezzoBiglietto)
+    (prezzoFinale = prezzoBiglietto)
 };
+
+let age = document.getElementById("eta");
+age.innerHTML = `Età: ${eta} anni`
+
+let Km = document.getElementById("km");
+Km.innerHTML = `Distanza selezionata: ${quantitaKm} km`
+
+let finalPrice = document.getElementById("prezzo-finale");
+finalPrice.innerHTML = `Prezzo biglietto: ${prezzoFinale}€`
+
+
