@@ -21,7 +21,7 @@ alert ("Benvenuto utente. Rispondi alle seguenti domande per ottenere il prezzo 
 let eta = prompt("Quanti anni hai?"); 
 var valid = false;
 while (!valid) {
-    if (isNaN(parseInt(eta)) || eta.length == 0) {
+    if (isNaN(parseInt(eta)) || eta.length < 1 || eta.length > 2) {
         eta = prompt("Seleziona un età valida.");
     } 
     else {
