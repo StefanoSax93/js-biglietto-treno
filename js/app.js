@@ -21,8 +21,8 @@ alert ("Benvenuto utente. Rispondi alle seguenti domande per ottenere il prezzo 
 let eta = prompt("Quanti anni hai?"); 
 var valid = false;
 while (!valid) {
-    if (isNaN(eta) || eta.length == 0) {
-        eta = prompt("Seleziona un età valida.")
+    if (isNaN(parseInt(eta)) || eta.length == 0) {
+        eta = prompt("Seleziona un età valida.");
     } 
     else {
         valid = true;
@@ -32,23 +32,22 @@ while (!valid) {
 let quantitaKm = prompt("Quanti chilometri vuoi percorrere?");
 var valid = false;
 while (!valid) {
-    if (isNaN(quantitaKm) || quantitaKm.length < 1 || quantitaKm.length > 4) {
-        quantitaKm = prompt("Seleziona un valore numerico valido da 1 a 4 cifre.")
+    if (isNaN(parseInt(quantitaKm)) || quantitaKm.length < 1 || quantitaKm.length > 4) {
+        quantitaKm = prompt("Seleziona un valore numerico valido da 1 a 4 cifre.");
     }  else {
         valid = true;
     }
 };
-
-let prezzoBiglietto = quantitaKm * 0.21;
-console.log (`hai ${eta} anni`);
+const prezzoAlKm = 0.21;
+let prezzoBiglietto = parseInt(quantitaKm) * prezzoAlKm;
 let prezzoFinale;
 
-if (eta < 18) {
-    (prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 20 / 100))
-} else if (eta > 65) {
-    (prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 40 / 100))
+if (parseInt(eta) < 18) {
+    (prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 20 / 100));
+} else if (parseInt(eta) > 65) {
+    (prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 40 / 100));
 } else {
-    (prezzoFinale = prezzoBiglietto)
+    (prezzoFinale = prezzoBiglietto);
 };
 
 let age = document.getElementById("eta");
